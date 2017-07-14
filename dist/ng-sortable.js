@@ -212,7 +212,7 @@
           var useRelative = (containerPositioning === 'relative');
 
           element.x = event.pageX - pos.offsetX;
-          element.y = event.pageY - pos.offsetY;
+          element.y = event.pageY - pos.offsetY - $(document).scrollTop();
 
           if (container) {
             bounds = this.offset(container, scrollableContainer);
